@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">github</string>
+
+
+    <string name="screen_title_repository_list">Repositories</string>
+    <string name="screen_title_repository_details">Repository</string>
 </resources>

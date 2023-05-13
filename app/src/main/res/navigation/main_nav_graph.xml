@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav_graph">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/repositoryListScreen">
+
+    <fragment
+        android:id="@+id/repositoryListScreen"
+        android:name="galstyan.hayk.github.presentation.repositories.list.RepositoryListScreen"
+        android:label="@string/screen_title_repository_list"
+        tools:layout="@layout/screen_repository_list">
+        <action
+            android:id="@+id/to_repositoryDetailsScreen"
+            app:destination="@id/repositoryDetailsScreen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/repositoryDetailsScreen"
+        android:name="galstyan.hayk.github.presentation.repositories.details.RepositoryDetailsScreen"
+        android:label="@string/screen_title_repository_details"
+        tools:layout="@layout/screen_repository_details" />
 
 </navigation>
