@@ -15,6 +15,10 @@ buildscript {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         // Navigation
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+
+        // Secrets: reads secrets from a properties file not checked into version control
+        // see: https://github.com/google/secrets-gradle-plugin
+        classpath "com.google.android.libraries.mapsplatform.secrets-gradle-plugin:secrets-gradle-plugin:2.0.1"
     }
 }
 
