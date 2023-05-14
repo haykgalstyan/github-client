@@ -6,11 +6,13 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class GithubClientFactory(accessToken: String) {
+class GithubClientFactory(accessToken: String, logsEnabled: Boolean) {
     private val authInterceptor = AuthenticationInterceptor(accessToken)
 
     private val loggingInterceptor = HttpLoggingInterceptor().apply {
-        level = HttpLoggingInterceptor.Level.BODY
+        level =
+            if (logsEnabled) HttpLoggingInterceptor.Level.BODY
+            else HttpLoggingInterceptor.Level.NONE
     }
 
     private val httpClient = OkHttpClient()

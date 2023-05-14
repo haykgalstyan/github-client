@@ -48,7 +48,7 @@ class RepositoryListViewModel @Inject constructor(
                 val from = page * pageSize - pageSize
                 val to = page * pageSize
                 _repositoryList.addAll(pageList)
-                RepositoryListUiState.Data(RepositoryListData(_repositoryList, from, to))
+                RepositoryListUiState.Data(RepositoryListUiState.Data.ListData(_repositoryList, from, to))
             } catch (e: Exception) {
                 RepositoryListUiState.Error(UiError.from(e))
             }

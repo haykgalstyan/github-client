@@ -15,7 +15,4 @@ interface RepositoriesApi {
         @Query("per_page") perPage: Int = 10,
         @Query("page") page: Int = 1,
     ): Call<ResponseDto>
-
-    // todo: check slow conn
-    // todo: use api key
 }

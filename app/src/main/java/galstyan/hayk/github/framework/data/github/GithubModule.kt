@@ -14,13 +14,14 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object GithubModule {
 
-    private val clientFactory = GithubClientFactory(BuildConfig.GITHUB_ACCESS_TOKEN)
+    private val clientFactory = GithubClientFactory(
+        accessToken = BuildConfig.GITHUB_ACCESS_TOKEN,
+        logsEnabled = BuildConfig.DEBUG
+    )
 
     @Provides
     @Singleton
     fun provideRepositoriesDataSource(): RepositoryDataSource {
-        return RepositoriesRemoteDs(
-            clientFactory.createClient(RepositoriesApi::class.java)
-        )
+        return RepositoriesRemoteDs(clientFactory.createClient(RepositoriesApi::class.java))
     }
 }
