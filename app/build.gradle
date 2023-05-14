@@ -75,8 +75,18 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.11.0'
 
-    // Testing
+
+    /*** Testing ***/
+    // Unit
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'androidx.test.ext:junit-ktx:1.1.5'
+    // Mock
+    testImplementation 'org.mockito:mockito-core:5.3.1'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:4.1.0'
+    testImplementation 'org.mockito:mockito-inline:5.2.0'
+    testImplementation 'io.mockk:mockk:1.13.5'
+    // Coroutine testing (runBlockingTest, CoroutineDispatcher etc.)
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.1'
+    // InstantTaskExecutorRule for arch components
+    testImplementation 'androidx.arch.core:core-testing:2.2.0'
 }
