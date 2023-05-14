@@ -5,7 +5,7 @@ import galstyan.hayk.github.domain.model.Repository
 
 interface RepositoryDataSource {
 
-    suspend fun getRepositories(): List<Repository>
+    suspend fun getRepositories(page: Int): List<Repository>
 
-    suspend fun getRepositoryDetails(): Repository
+    suspend fun getRepositoryDetails(id: Long): Repository
 }

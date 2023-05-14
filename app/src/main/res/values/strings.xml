@@ -4,4 +4,12 @@
 
     <string name="screen_title_repository_list">Repositories</string>
     <string name="screen_title_repository_details">Repository</string>
+
+    <string name="screen_details_action_link">Visit Github page</string>
+
+    <string name="loading_message">Loading content, please wait.</string>
+
+    <string name="error_connection">Connection error</string>
+    <string name="error_unknown">Something went wrong</string>
+
 </resources>
